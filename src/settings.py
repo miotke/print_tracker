@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'Print_Tracker'
+    'print_tracker'
 ]
 
 MIDDLEWARE = [
