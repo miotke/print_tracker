@@ -1,17 +1,26 @@
 # Defines base image
-FROM python:3
+# FROM python:3.9.5-alpine
+FROM python:3.9.5
 
-# Set the working directory for the files to be copied to
-WORKDIR /usr/src/app/
+# Set the working directory inside the container
+WORKDIR /usr/src/app
 
-# Copies the files from the root dir to the WORKDIR
-COPY . .
+# Set environment variables 
+# Prevents copying Python pyc files to the container.
+ENV PYTHONDONTWRITEBYTECODE 1
+# Ensures Python output is logged out to the terminal.
+ENV PYTHONUNBUFFERED 1 
 
-# Instsall dependencies
+# Install dependencies
+RUN pip install --upgrade pip
+COPY ./requirements.txt /usr/src/app
 RUN pip install -r requirements.txt
+
+# Copies project code 
+COPY . /usr/src/app
 
 # Expose port 8000 so the app can be accessed
 EXPOSE 8000
 
 # Runs the development server
-CMD python manage.py runserver
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
