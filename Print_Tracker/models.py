@@ -14,7 +14,7 @@ class PrintTracker(models.Model):
     date_of_print = models.DateField(default=today)
     material_used = models.CharField(max_length=25)
     color = models.CharField(max_length=100)
-    stl_file = models.CharField(max_length=100, blank=True)
+    stl_file = models.FileField()
 
 
     def save(self):
