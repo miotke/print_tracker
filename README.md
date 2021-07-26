@@ -1,13 +1,13 @@
 # Print Tracker 
 
-A small Django application used to track my 3D prints and to learn how to use Docker and automate deployment. Deployment will be to a Raspberry Pi more than likey. 
+A small Django application used to track my 3D prints and to learn how to use Docker and automate deployment. Deployment will be to a Raspberry Pi more than likely. 
 
 
 ## Docker 
 
-All commands are documented as this is a learning project. 
-Currently the database is build into the same image. The database
-will be removed from this image at a later time.
+All commands are documented as this is a learning project. Currently the database is build into the same image. The database will be removed from this image at a later time.
+
+Docke Hub: https://hub.docker.com/repository/docker/andrewmiotke/print_tracker
 
 ### Build 
 
