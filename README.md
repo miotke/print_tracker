@@ -9,6 +9,12 @@ All commands are documented as this is a learning project. Currently the databas
 
 Docke Hub: https://hub.docker.com/repository/docker/andrewmiotke/print_tracker
 
+### Docker Compose
+
+- Build `docker-compose build`
+- Run `docker-compose up`
+    - For detached mode `docker-compose up -d`
+
 ### Build 
 
 `docker build -t andrewmiotke/print_tracker .`
