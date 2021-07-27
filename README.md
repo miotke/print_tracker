@@ -14,6 +14,7 @@ Docke Hub: https://hub.docker.com/repository/docker/andrewmiotke/print_tracker
 - Build `docker-compose build`
 - Run `docker-compose up`
     - For detached mode `docker-compose up -d`
+- Stop `docker-compose down`
 
 ### Build 
 
