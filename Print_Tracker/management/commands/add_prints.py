@@ -4,7 +4,6 @@ from django.utils.crypto import get_random_string
 from  print_tracker.models import PrintTracker
 
 
-
 class Command(BaseCommand): 
     help = 'Creates a lot of fake print jobs'
 
