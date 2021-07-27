@@ -1,6 +1,5 @@
 # Defines base image
-# FROM python:3.9.5-alpine
-FROM python:3.9.5
+FROM python:3.9.5-alpine
 
 # Set the working directory inside the container
 WORKDIR /usr/src/app
@@ -20,6 +19,7 @@ RUN pip install -r requirements.txt
 COPY . /usr/src/app
 
 # Expose port 8000 so the app can be accessed
+# This EXPOSE is a redundant
 EXPOSE 8000
 
 # Runs the development server

@@ -1,0 +1,11 @@
+version: "3.8"
+
+services: 
+
+    print_tracker:
+        container_name: printTracker
+        image: andrewmiotke/print_tracker
+        build: 
+            context: .
+        ports: 
+            - "8000:8000"
