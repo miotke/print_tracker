@@ -15,7 +15,6 @@ class PrintTracker(models.Model):
     material_used = models.CharField(max_length=25)
     color = models.CharField(max_length=100)
     stl_file = models.FileField()
-    print_successful = models.BooleanField()
 
     def save(self):
         super().save()
