@@ -1,11 +1,33 @@
 version: "3.8"
 
 services: 
-
-    print_tracker:
-        container_name: printTracker
-        image: andrewmiotke/print_tracker
-        build: 
+    app:
+        build:
             context: .
-        ports: 
+        ports:
             - "8000:8000"
+        volumes:
+            - .:/usr/src/app
+        command:
+            sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+        environment:
+            - DB_HOST=database
+            - DB_NAME=database
+            - DB_USER=${username}
+            - DB_PASSWORD=${password}
+        depends_on:
+            - database
+
+    database:
+        image: postgres:13-alpine
+        environment:
+            - POSTGRES_DB=database
+            - POSTGRES_USER=${username}
+            - POSTGRES_PASSWORD=${password}
+        ports:
+            - "5432:5432"
+        volumes:
+            - data-volume:/var/lib/postgresql/data
+
+volumes:
+    data-volume:
