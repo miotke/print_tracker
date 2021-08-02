@@ -16,6 +16,7 @@ class PrintTracker(models.Model):
     color = models.CharField(max_length=100, blank=True)
     gcode_file = models.FileField(blank=True)
 
+
     def save(self):
         super().save()
 
