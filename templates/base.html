@@ -23,13 +23,13 @@
 
         <div class="list-group">
             {% for print_job in print_jobs %}
-            <a href="#" class="list-group-item list-group-item-action" aria-current="true">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">{{ print_job.print_name }}</h5>
-                    <small>{{ print_job.date_of_print }}</small>
-                </div>
-                <small>Print hours: {{ print_job.total_hours_printed}}h {{print_job.total_minutes_printed}}m</small>
-            </a>
+                <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h3 class="mb-1">{{ print_job.print_name }}</h3>
+                        <small>{{ print_job.date_of_print }}</small>
+                    </div>
+                    <small>Print hours: {{ print_job.total_hours_printed}}h {{print_job.total_minutes_printed}}m</small>
+                </a>
             {% endfor %}
         </div>
     </div>
