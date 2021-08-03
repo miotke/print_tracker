@@ -16,10 +16,10 @@ Including another URLconf
 from django import urls
 from django.contrib import admin
 from django.urls import path
-from django.urls import include 
+from django.urls import include
 from print_tracker.views import PrintListView
 
 urlpatterns = [
-    path('', include('print_tracker.urls')),
-    path('admin/', admin.site.urls),
+    path("", include("print_tracker.urls")),
+    path("admin/", admin.site.urls),
 ]
