@@ -22,5 +22,6 @@ class PrintTracker(models.Model):
     def to_something(self):
         print('hello")
 
+
     def __str__(self):
         return self.print_name
