@@ -24,5 +24,3 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Black Check
         uses: jpetrucciani/black-check@20.8b1
-        with:
-          path: ./print_tracker/*
