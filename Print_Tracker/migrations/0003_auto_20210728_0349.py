@@ -6,17 +6,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('print_tracker', '0002_remove_printtracker_print_successful'),
+        ("print_tracker", "0002_remove_printtracker_print_successful"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='printtracker',
-            name='stl_file',
+            model_name="printtracker",
+            name="stl_file",
         ),
         migrations.AddField(
-            model_name='printtracker',
-            name='gcode_file',
-            field=models.FileField(blank=True, upload_to=''),
+            model_name="printtracker",
+            name="gcode_file",
+            field=models.FileField(blank=True, upload_to=""),
         ),
     ]

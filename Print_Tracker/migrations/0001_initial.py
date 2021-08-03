@@ -8,21 +8,23 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='PrintTracker',
+            name="PrintTracker",
             fields=[
-                ('print_name', models.CharField(max_length=100, primary_key=True, serialize=False)),
-                ('total_hours_printed', models.IntegerField(default=0)),
-                ('total_minutes_printed', models.IntegerField(default=0)),
-                ('date_of_print', models.DateField(default=django.utils.timezone.now)),
-                ('material_used', models.CharField(max_length=25)),
-                ('color', models.CharField(max_length=100)),
-                ('stl_file', models.FileField(upload_to='')),
-                ('print_successful', models.BooleanField()),
+                (
+                    "print_name",
+                    models.CharField(max_length=100, primary_key=True, serialize=False),
+                ),
+                ("total_hours_printed", models.IntegerField(default=0)),
+                ("total_minutes_printed", models.IntegerField(default=0)),
+                ("date_of_print", models.DateField(default=django.utils.timezone.now)),
+                ("material_used", models.CharField(max_length=25)),
+                ("color", models.CharField(max_length=100)),
+                ("stl_file", models.FileField(upload_to="")),
+                ("print_successful", models.BooleanField()),
             ],
         ),
     ]
