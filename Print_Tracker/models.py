@@ -18,5 +18,9 @@ class PrintTracker(models.Model):
     def save(self):
         super().save()
 
+    
+    def to_something(self):
+        print('hello")
+
     def __str__(self):
         return self.print_name
