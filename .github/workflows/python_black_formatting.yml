@@ -25,4 +25,4 @@ jobs:
       - name: Black Check
         uses: jpetrucciani/black-check@20.8b1
         with:
-          path: ./print_tracker/
+          path: ./print_tracker/*
